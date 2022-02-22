@@ -2,6 +2,7 @@
 
 function setup() {
   createCanvas(400, 400);
+  // PLAN: recursive quilt pattern with squares and/or circles
 }
 
 function draw() {
