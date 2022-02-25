@@ -29,7 +29,7 @@ function setup() {
   dBlue = calculateDistances(pointBlue);
   dCross = dist(0, 0, width, height);
 
-  createPoints(7);
+  createPoints(3);
 }
 
 function calculateDistances(point) {
