@@ -16,7 +16,7 @@ var pointGreen, pointRed, pointBlue;
 var dGreen, dRed, dBlue;
 
 var points = [];
-var radius = 50;
+var radius = 100;
 
 function setup() {
   createCanvas(600, 600);
