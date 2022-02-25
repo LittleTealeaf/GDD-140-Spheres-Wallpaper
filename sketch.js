@@ -1,56 +1,35 @@
 /// <reference path="./libraries/p5.global-mode.d.ts" />
 
-class Point {
-  constructor(x,y) {
-    this.x = x;
-    this.y = y;
-  }
-
-  toString() {
-    return this.x + " " + this.y;
-  }
-}
-
-var points;
+var x = 0;
+var y = 0;
+var pointsPerFrame = 5000;
 
 function setup() {
   createCanvas(600, 600);
-  points = createPositions(width,height,10);
-
-  print(points);
-}
-
-function drawBackground() {
-  noStroke();
-  for(var x = 0; x < width; x++) {
-    for(var y = 0; y < height; y++) {
-      var i = x;
-      var j = y * 2;
-      
-      var minDist = -1;
-      points.forEach(element => {
-        var norm = dist(x,y,element.x,element.y);
-        if(minDist == -1 || norm < minDist) {
-          minDist = norm;
-        }
-      });
-      stroke((1 - minDist / width) * 255);
-      point(x,y);
-    }
-  }
+  background(220);
 }
 
 function draw() {
-  background(220);
-  drawBackground();
-  noLoop();
+  renderPartial();
 }
 
-
-function createPositions(width,height, count) {
-  var vals = [];
-  for(var i = 0; i < count; i++){
-    vals.push(new Point(Math.random() * width,Math.random() * height));
+function renderPartial() {
+  if(y < height) {
+    var points = 0;
+    while(y < height && points < pointsPerFrame) {
+      points++;
+      render(x,y);
+      x = (x + 1)%width;
+      if(x == 0) {
+        y++;
+      }
+    }
+  } else {
+    noLoop();
   }
-  return vals;
+}
+
+function render(x,y) {
+  stroke((dist(x,y,0,0) + dist(x,y,width,0) + dist(x,y,0,height) + dist(x,y,width,height) + dist(x,y,width/2,height/2))%255);
+  point(x,y);
 }
