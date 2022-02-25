@@ -68,9 +68,9 @@ function render(x, y) {
     b = 0;
 
 
-  r = ((1 - dist(x, y, pointRed.x,pointRed.y) / dRed) * 300)%255;
-  g = ((1 - dist(x, y, pointGreen.x,pointGreen.y) / dBlue) * 300)%255;
-  b = ((1 - dist(x, y, pointBlue.x,pointBlue.y) / dGreen) * 300)%255;
+  r = ((1 - dist(x, y, pointRed.x,pointRed.y) / dRed) * 255)%255;
+  g = ((1 - dist(x, y, pointGreen.x,pointGreen.y) / dBlue) * 255)%255;
+  b = ((1 - dist(x, y, pointBlue.x,pointBlue.y) / dGreen) * 255)%255;
 
   stroke(r, g, b);
 
