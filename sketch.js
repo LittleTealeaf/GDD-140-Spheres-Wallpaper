@@ -27,7 +27,7 @@ var circles = [];
 var radius = 150;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(windowWidth, windowHeight);
   background(220);
   pointGreen = new Point(random(width),random(height));
   pointRed = new Point(random(width),random(height));
