@@ -1,7 +1,7 @@
 # Wallpaper Pattern
 ## GDD-140 Project 4.2
 
-[![CodeQL](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/codeql-analysis.yml) [![CodeQL](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/codeql-analysis.yml)
+[![CodeQL](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/codeql-analysis.yml) [![pages-build-deployment](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/LittleTealeaf/GDD-140-Project-4.2/actions/workflows/pages/pages-build-deployment)
 
 [**View Deployment**](https://littletealeaf.github.io/GDD-140-Project-4.2/)
 
