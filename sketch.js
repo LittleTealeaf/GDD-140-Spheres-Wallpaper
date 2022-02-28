@@ -88,13 +88,7 @@ function render(x, y) {
   b = ((1 - dist(x, y, pointBlue.x,pointBlue.y) / dGreen) * 255)%255;
 
   stroke(r, g, b);
-
-  // points.forEach(e => {
-  //   d = dist(x,y,e.x,e.y);
-  //   if(d < radius) {
-  //     stroke((255 - r) * (1 - d / radius),(255-b) * (1 - d/radius),(255-g) * (1 - d/radius));
-  //   }
-  // })
+  
   circles.forEach(e => {
     d = dist(x,y,e.x,e.y);
     if(d < e.radius) {
