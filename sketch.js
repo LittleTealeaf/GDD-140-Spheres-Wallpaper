@@ -24,7 +24,7 @@ class Circle {
 /**
  * Number of points to be rendered in each frame
  */
-const pointsPerFrame = 2000;
+const pointsPerFrame = 2500;
 
 
 //The currently rendered x and y positions
@@ -39,11 +39,14 @@ var dGreen, dRed, dBlue;
 //Array of Circles
 var circles = [];
 //Max radius of a circle
-const radius = 150;
+var raidus = 150;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(220);
+
+  //set radius to scale with width
+  radius = Math.min(width,height)/7;
 
   //Sets each color channel point
   pointGreen = new Point(random(width),random(height));
@@ -70,7 +73,8 @@ function calculateDistances(point) {
  * Creates a bunch of circles to populate 
  */
 function createCircles() {
-  const count = 50;
+  //Dynamically create count based on the ratio between the radius and the larger of the dimensions
+  const count = Math.max(width,height) / radius * 5;
   var circles = [];
   for(var i = 0; i < count; i++) {
     //Creates a new circle at a random position with a random radius
