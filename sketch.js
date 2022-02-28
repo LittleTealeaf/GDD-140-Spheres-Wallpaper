@@ -24,7 +24,7 @@ class Circle {
 /**
  * Number of points to be rendered in each frame
  */
-const pointsPerFrame = 5000;
+const pointsPerFrame = 2000;
 
 
 //The currently rendered x and y positions
@@ -70,7 +70,7 @@ function calculateDistances(point) {
  * Creates a bunch of circles to populate 
  */
 function createCircles() {
-  const count = 10;
+  const count = 50;
   var circles = [];
   for(var i = 0; i < count; i++) {
     //Creates a new circle at a random position with a random radius
